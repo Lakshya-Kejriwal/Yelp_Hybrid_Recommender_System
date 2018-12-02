@@ -10,7 +10,9 @@ Collaborative-Filtering (CF) Based Recommendation techniques have been quite suc
 
 ### Prerequisites
 
-### Instructions
+* Scala 2.11 
+* Spark 2.3.1 (Mllib, Core, SQL)
+* Java 1.8
 
 # 2. Content Based
 
