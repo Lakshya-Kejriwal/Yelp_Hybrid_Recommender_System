@@ -2,6 +2,8 @@
 
 The goal of this project is to create a hyrbid recommendation system using the Yelp dataset([here](https://www.yelp.com/dataset)) to recommend businesses to users.
 
+# Data
+
 # 1. Collaborative Filtering
 
 # 2. Content Based
@@ -34,3 +36,4 @@ pip install nltk
 * In order to run the code for any content based model give the path for `train_file` and `test_file` under `Load Train and Test Data`
 * Change the parameters for `TfidfVectorizer` under `TF-IDF Vector Creation` or `Doc2Vec` under `Doc2Vec Model Creation`. (optional)
 * Hypertune the parameters for regression under `Training Regressor on similarity values` if the data is changed. (optional)
+* Give the path and name of file to save test results under `Save predictions file`.
