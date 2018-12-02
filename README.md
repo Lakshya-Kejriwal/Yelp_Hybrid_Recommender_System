@@ -1,4 +1,4 @@
-# Yelp_Hybrid_Recommender_System
+# Yelp Hybrid Recommender System
 
 The goal of this project is to create a hyrbid recommendation system using the Yelp dataset([here](https://www.yelp.com/dataset)) to recommend businesses to users.
 
