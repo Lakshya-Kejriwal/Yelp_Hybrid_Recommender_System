@@ -43,3 +43,5 @@ pip install nltk
 * Change the parameters for `TfidfVectorizer` under `TF-IDF Vector Creation` or `Doc2Vec` under `Doc2Vec Model Creation`. (optional)
 * Hypertune the parameters for regression under `Training Regressor on similarity values` if the data is changed. (optional)
 * Give the path and name of file to save test results under `Save predictions file`.
+
+# 3. Hybrid Recommender System
