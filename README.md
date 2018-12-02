@@ -6,6 +6,12 @@ The goal of this project is to create a hyrbid recommendation system using the Y
 
 # 1. Collaborative Filtering
 
+Collaborative-Filtering (CF) Based Recommendation techniques have been quite successful in the past giving promising results in this domain. The main idea behind these set of algorithms is that the users with similar interests may like similar items. These algorithms unlike Content-Based approaches don’t require the content(features) of the items we want to recommend to users but instead only requires ratings various users have given to various items. Based on just this information, it is able to predict rating a user may give to some item it has not rated. Moreover, it helps in recommending new items to users which he may like
+
+### Prerequisites
+
+### Instructions
+
 # 2. Content Based
 
 Content based recommendation systems try to find similarity between users and items by building their corresponding vectors. The most important aspect of such models is choosing features. We follow three different approaches to build user and item features. These features are transformed into vectors and then different similarity measures can be used to find compute the similarity between them. Unlike collaborative recommendation systems, in content-based models we used text in the review to form user and item vectors.
