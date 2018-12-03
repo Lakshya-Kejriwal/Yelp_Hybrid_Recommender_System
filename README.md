@@ -51,5 +51,18 @@ pip install nltk
 The final model combines all the predictions generated from the above-mentioned models by their weighted sum. The CF model uses the ratings, while the content-based model uses reviews or categories to capture the similarity between users and businesses to predict the unknown rating. The combination of all the models can grasp different aspects of the relationship between users and businesses to give a more accurate prediction.
 
 ### Instructions
-* To run the code give the test_ground_truth and test_predictions as program arguments in the following order (order is important as the weights of the models are hardcoded),
+* To generate the predictions give the `test_ground_truth` and `test_predictions` as program arguments to the `HybridModelRMSE.scala` in the following order (order is important as the weights of the models are hardcoded).
+
+1. 
+2.
+3.
+4. 
+5. 
+6.
+7.
+8.
+
+This will generate a resultant RMSE of the combined models.
+
+
 
