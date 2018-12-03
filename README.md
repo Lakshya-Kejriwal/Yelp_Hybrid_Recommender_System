@@ -64,5 +64,11 @@ The final model combines all the predictions generated from the above-mentioned 
 
 This will generate a resultant RMSE of the combined models.
 
+* to generate recommendations corresponding to a user give 4 program arguments to  `HybridModelRecommendation.scala` in the following order. 
 
+1.
+2.
+3.
+4.
 
+This will generate a text file of all the recommendations for userset in the test file. First item of each row is the user_id and the following items in that row are the business ids of the recommendations.  
