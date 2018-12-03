@@ -16,7 +16,8 @@ Collaborative-Filtering (CF) Based Recommendation techniques have been quite suc
 
 ### Instructions
 
-* To run the collaborative filtering models run the `Collaborative_Models.jar` along with the following arguments 
+* To run the collaborative filtering models run the `Collaborative_Models.jar` along with the following arguments. 
+
 
 # 2. Content Based
 
@@ -57,22 +58,23 @@ The final model combines all the predictions generated from the above-mentioned 
 ### Instructions
 * To generate the predictions give the `test_ground_truth` and test_predictions(test prediction files generated using each one of the content based and collaborative based models) as program arguments to the `HybridModelRMSE.scala` in the following order (order is important as the weights of the models are hardcoded).
 
-1. 
-2.
-3.
-4. 
-5. 
-6.
-7.
-8.
+1. city_test.txt
+2. <city>_ItemBased_test_predictions.txt
+3. <city>_UserBased_test_predictions.txt
+4. <city>_ALS_test_predictions.txt
+5. <city>_SGD_test_predictions.txt
+6. <city>_TextBased_test_predictions.txt
+7. <city>_ReviewBased_test_predictions.txt
+8. <city>_CategoryBased_test_predictions.txt
+
 
 This will generate a resultant RMSE of the combined models along with a text file `Hybrid_Model_predictions.txt` which contains predictions of rating corresponding to each user business pair in test file.
 
-* to generate recommendations corresponding to a user give 4 ()program arguments to  `HybridModelRecommendation.scala` in the following order. 
+* to generate recommendations corresponding to a user give 4 program arguments to  `HybridModelRecommendation.scala` in the following order. 
 
-1.
-2.
-3.
-4.
+1. Hybrid_Model_predictions.txt
+2. ReviewBased_Sorted_similarities.txt
+3. UserBased_Sorted_similarities.txt
+4. TextBased_Sorted_similarities.txt
 
 This will generate a text file of all the recommendations for userset in the test file. First item of each row is the user_id and the following items in that row are the business ids of the recommendations.  
