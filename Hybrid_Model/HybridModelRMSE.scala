@@ -7,17 +7,15 @@ object HybridModelRMSE {
 
     val start_time = System.currentTimeMillis()
 
-    val test_data_csv_path = "/Users/rishabkumar/Downloads/final results/PittsBurgh/pittsburgh_review_with_text_20_res_lemma_data_train 2.txt"
+    val test_data_csv_path = args(0)
 
-    val user_pred_csv_path = "/Users/rishabkumar/Downloads/final results/PittsBurgh/Pittsburgh_UserBased_train_predictions.txt"
-    val item_pred_csv_path = "/Users/rishabkumar/Downloads/final results/PittsBurgh/Pittsburgh_ItemBased_train_predictions.txt"
-
-    val als_pred_csv_path = "/Users/rishabkumar/Downloads/final results/PittsBurgh/Lakshya_ModelBased_train_predictions_pittsburgh.txt"
-    val sgd_pred_csv_path = "/Users/rishabkumar/Downloads/final results/PittsBurgh/SGDBasedPredictions_train_pittusburgh.txt"
-
-    val review_based_csv_path = "/Users/rishabkumar/Downloads/final results/PittsBurgh/TrainTFIDF_ReviewBasedPredictions_pittsburgh.txt"
-    val text_based_csv_path = "/Users/rishabkumar/Downloads/final results/PittsBurgh/TrainDoc2Vec_TextBasedPredictions_pittsburgh.txt"
-    val category_based_csv_path = "/Users/rishabkumar/Downloads/final results/PittsBurgh/TrainTFIDF_CategoryBasedPredictions_pittsburgh.txt"
+    val user_pred_csv_path = args(1)
+    val item_pred_csv_path = args(2)
+    val als_pred_csv_path = args(3)
+    val sgd_pred_csv_path = args(4)
+    val review_based_csv_path = args(5)
+    val text_based_csv_path = args(6)
+    val category_based_csv_path = args(7)
 
     val conf = new SparkConf().setAppName("CalcAvg").setMaster("local[*]")
     val sc = new SparkContext(conf)
@@ -70,7 +68,7 @@ object HybridModelRMSE {
     var combined_pred = item_based_rdd.join(user_based_rdd).join(als_based_rdd).join(sgd_based_rdd).join(text_based_rdd).join(review_based_rdd).join(category_based_rdd)
       .map(item => (item._1, item._2._2 * 0.1 + item._2._1._2 * 0.1 + item._2._1._1._2 * 0.1 + item._2._1._1._1._2 * 0.20 + item._2._1._1._1._1._2 * 0.20 + item._2._1._1._1._1._1._2 * 0.15 + item._2._1._1._1._1._1._1 * 0.15))
 
-    val outFileName = "/Users/rishabkumar/Desktop/DM/final_project/src/main/NewPred/weighted_pred.txt"
+    val outFileName = "/Users/rishabkumar/Desktop/DM/final_project/src/main/NewPred/Hybrid_Model_predictions.txt"
     val pwrite = new PrintWriter(new File(outFileName))
     var output_list = combined_pred.collect()
     for (i <- output_list) {
