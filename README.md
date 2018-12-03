@@ -14,6 +14,10 @@ Collaborative-Filtering (CF) Based Recommendation techniques have been quite suc
 * Spark 2.3.1 (Mllib, Core, SQL)
 * Java 1.8
 
+### Instructions
+
+* To run the collaborative filtering models run the `Collaborative_Models.jar` along with the following arguments 
+
 # 2. Content Based
 
 Content based recommendation systems try to find similarity between users and items by building their corresponding vectors. The most important aspect of such models is choosing features. We follow three different approaches to build user and item features. These features are transformed into vectors and then different similarity measures can be used to find compute the similarity between them. Unlike collaborative recommendation systems, in content-based models we used text in the review to form user and item vectors.
@@ -51,7 +55,7 @@ pip install nltk
 The final model combines all the predictions generated from the above-mentioned models by their weighted sum. The CF model uses the ratings, while the content-based model uses reviews or categories to capture the similarity between users and businesses to predict the unknown rating. The combination of all the models can grasp different aspects of the relationship between users and businesses to give a more accurate prediction.
 
 ### Instructions
-* To generate the predictions give the `test_ground_truth` and `test_predictions` as program arguments to the `HybridModelRMSE.scala` in the following order (order is important as the weights of the models are hardcoded).
+* To generate the predictions give the `test_ground_truth` and test_predictions(test prediction files generated using each one of the content based and collaborative based models) as program arguments to the `HybridModelRMSE.scala` in the following order (order is important as the weights of the models are hardcoded).
 
 1. 
 2.
@@ -62,9 +66,9 @@ The final model combines all the predictions generated from the above-mentioned 
 7.
 8.
 
-This will generate a resultant RMSE of the combined models.
+This will generate a resultant RMSE of the combined models along with a text file `Hybrid_Model_predictions.txt` which contains predictions of rating corresponding to each user business pair in test file.
 
-* to generate recommendations corresponding to a user give 4 program arguments to  `HybridModelRecommendation.scala` in the following order. 
+* to generate recommendations corresponding to a user give 4 ()program arguments to  `HybridModelRecommendation.scala` in the following order. 
 
 1.
 2.
