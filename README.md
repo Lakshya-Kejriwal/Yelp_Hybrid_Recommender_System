@@ -2,7 +2,11 @@
 
 The goal of this project is to create a hyrbid recommendation system using the Yelp [dataset](https://www.yelp.com/dataset) to recommend businesses to users.
 
-# Data
+# Data 
+
+* The data is a subset of Yelp Dataset Challenge.
+* We chose data from 2 cities i.e. Pittsburgh and Las Vegas which can be found [here](https://drive.google.com/drive/folders/1Q6zdfU_k1DJ3I963AlT6KQTGgZNLATR-?usp=sharing)
+
 
 # 1. Collaborative Filtering
 
@@ -16,7 +20,7 @@ Collaborative-Filtering (CF) Based Recommendation techniques have been quite suc
 
 ### Instructions
 
-* To run the collaborative filtering models follow the steps below, 
+To run the collaborative filtering models follow the steps below, 
 1. save the `Collaborative_Models.jar` in the bin folder in spark. 
 2. open terminal and go to ~/spark/bin/
 3. run the following command,
@@ -25,10 +29,10 @@ Collaborative-Filtering (CF) Based Recommendation techniques have been quite suc
 spark-submit --class <class_name> Collaborative_Models.jar <train_file_path> <test_file_path> <city> <run_mode>
 ```
 
-<class_name> : ItemBased_CF / UserBased_CF / als
-<train_path> : entire path to the training data
-<test_path> : entire path to the testing data
-<run_mode> : 0 (will generate only test predictions) / 1 (will generate all the predictions test, train and all)
+* <class_name> : ItemBased_CF / UserBased_CF / als
+* <train_path> : entire path to the training data
+* <test_path> : entire path to the testing data
+* <run_mode> : 0 (will generate only test predictions) / 1 (will generate all the predictions test, train and all)
  
 
 # 2. Content Based
